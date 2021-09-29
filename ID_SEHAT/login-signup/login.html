@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Login | ID Sehat</title>
+</head>
+<body>
+<div class="hero">
+    <div class="background">
+        <img src="../assets/6796.png" alt="">
+    </div>
+    <div class="form-box">
+        <a href="../home.html"><i class="material-icons">clear</i></a>
+        <form class="input-group" id="login">
+            <h1>LOG IN</h1>
+            <hr>
+            <input type="email" class="field" placeholder="Email">
+            <input type="password" class="field" placeholder="Password">
+            <button type="button" class="submit-btn">MASUK</button>
+            <hr>
+            <span>Belum punya akun?</span>
+            <button type="button" id="toogle-btn" onclick="signup()">DAFTAR</button>
+        </form>
+        <form class="input-group" id="signup">
+            <h1>SIGN UP</h1>
+            <hr>
+            <input type="text" class="field" placeholder="Nama">
+            <input type="email" class="field" placeholder="Email">
+            <input type="password" class="field" placeholder="Password">
+            <button type="button" class="submit-btn">Daftar</button>
+            <hr>
+            <span>Sudah punya akun?</span>
+            <button type="button" id="toogle-btn" onclick="login()">MASUK</button>
+        </form>
+    </div>
+</div>
+<script>
+var x = document.getElementById("login")
+var y = document.getElementById("signup")
+
+function signup() {
+    x.style.left = "-400px";
+    y.style.left = "0px";
+}
+function login() {
+    x.style.left = "0px";
+    y.style.left = "400px";
+}
+</script>
+</body>
+</html>

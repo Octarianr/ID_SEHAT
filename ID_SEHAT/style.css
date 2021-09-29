@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/*=============== Header ===============*/
+.header {
+    display: flex;
+    align-items: center;
+    padding: 40px;
+}
+.header .logo {
+    flex: 1;
+}
+.mylogo {
+    position: absolute;
+    width: 60px;
+    top: 40px;
+    margin-left: 40px;
+}
+.idsehat {
+    width: 140px;
+    margin-top: 5px;
+    margin-left: 115px;
+}
+.tag {
+    display: block;
+    width: 240px;
+    margin-left: 114px;
+}
+.btn{
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: 2px solid #fff;
+    border-radius: 36px;
+    margin-right: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #fff;
+    border: 2px solid #FF6347;
+    color: black;
+}
+.active{
+    background-color: #FF6347;
+    color: #fff;
+}
+.login{
+    background-color: #4AB4DE;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 12px 24px;
+    border-radius: 36px;
+    margin-right: 60px;
+    cursor: pointer;
+}
+.login:hover{
+    background-color: #fff;
+    border: 2px solid #4AB4DE;
+    color: black;
+}
+
+/*=============== Main ===============*/
+
+/*=============== Footer ===============*/
+.footer{
+    background-color: #4AB4DE;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+}
+.footer h1{
+    flex: 1;
+    color: #fff;
+    font-size: 20px;
+}
+.footer a{
+    display: inline-block;
+    background-color: unset;
+    text-decoration: none;
+    color: #fff;
+    padding: 20px;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+.footer a:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
