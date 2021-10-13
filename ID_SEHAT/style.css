@@ -48,6 +48,7 @@ p {
 .login:hover {
     border: 2px solid var(--bs-secondary);
 }
+
 .container .img-fluid {
     width: 40vmax;
 }
