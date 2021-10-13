@@ -16,7 +16,7 @@ body {
     --bs-teal: #20c997;
     --bs-cyan: #0dcaf0;
     --bs-white: #fff;
-    --bs-gray: #6c757d;
+    --bs-gray: #aaaaaa;
     --bs-gray-dark: #343a40;
     --bs-black: #000;
     --bs-primary: #FF6347;
@@ -29,6 +29,26 @@ body {
     --bs-dark: #212529;
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
 }
+.material-icons.md-48{
+    font-size: 36px;
+    color: var(--bs-light);
+    background-color: var(--bs-gray);
+}
+.to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.to-top.active {
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+}
+
 a {
     text-decoration: none;
 }
