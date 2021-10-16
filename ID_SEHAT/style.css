@@ -37,6 +37,14 @@ p {
     text-align: justify;
     line-height: 30px;
 }
+.navbar {
+    background-color: var(--bs-light);
+    padding-bottom: 10px;
+    transition: 0.5s;
+}
+.navbar.shrink {
+    padding: 0;
+}
 .nav-link {
     border: 2px solid var(--bs-light);
     border-radius: 30px;

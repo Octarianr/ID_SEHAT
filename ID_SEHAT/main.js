@@ -7,3 +7,8 @@ window.addEventListener("scroll", () => {
         toTop.classList.remove("active");
     }
 })
+
+window.addEventListener("scroll", function() {
+    var nav = document.querySelector("nav");
+    nav.classList.toggle("shrink", window.scrollY > 1);
+})
