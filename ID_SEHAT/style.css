@@ -29,25 +29,6 @@ body {
     --bs-dark: #212529;
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
 }
-.material-icons.md-48{
-    font-size: 36px;
-    color: var(--bs-light);
-    background-color: var(--bs-gray);
-}
-.to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    border-radius: 50%;
-    cursor: pointer;
-    opacity: 0;
-    transition: all 0.5s;
-}
-.to-top.active {
-    bottom: 32px;
-    pointer-events: auto;
-    opacity: 1;
-}
 
 a {
     text-decoration: none;
@@ -102,4 +83,25 @@ table tr td a img {
 table tr td a p {
     color: var(--bs-black);
     text-align: center;
+}
+
+/*to top button*/
+.material-icons.md-48{
+    font-size: 36px;
+    color: var(--bs-light);
+    background-color: var(--bs-gray);
+}
+.to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s;
+}
+.to-top.active {
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
 }
