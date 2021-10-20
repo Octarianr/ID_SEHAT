@@ -32,7 +32,7 @@
                     <a class="nav-link" href="organ.html"><b>Organ Manusia</b></a>
                     <a class="nav-link" href="#"><b>Peta</b></a>
                     <a class="nav-link" href="#"><b>Forum</b></a>
-                    <a class="nav-link login" href="login-system/index.php"><b>Login</b></a>
+                    <a class="nav-link login" href="login-system/login.php"><b>Login</b></a>
                 </div>
             </div>
         </div>
