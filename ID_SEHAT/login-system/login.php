@@ -1,11 +1,4 @@
 <?php
-session_start();
-
-if (isset($_SESSION["login"])) {
-  header("Location: ../beranda.php");
-  exit;
-}
-
 require 'config.php';
 
 if (isset($_POST["masuk"])) {
@@ -21,9 +14,6 @@ if (isset($_POST["masuk"])) {
     // cek pass
     $row = mysqli_fetch_assoc($result);
     if (password_verify($pass, $row["password"])) {
-      // session 
-      $_SESSION["login"] = true;
-
       header("Location: ../beranda.php");
       exit;
     }
