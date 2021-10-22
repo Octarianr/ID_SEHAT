@@ -43,12 +43,14 @@ p {
     transition: 0.5s;
 }
 .navbar.shrink {
-    padding: 0;
+    padding: 5px;
 }
 
 .nav-link {
     border: 2px solid var(--bs-light);
     border-radius: 30px;
+    margin: 10px 20px;
+    padding: 5px;
     text-align: center;
 }
 .nav-link:hover {

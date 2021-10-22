@@ -18,8 +18,8 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <div class="container py-2">
+    <nav class="navbar navbar-expand-md navbar-light sticky-top">
+        <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="assets/logo/logo.png" alt="" width="30" height="24"
                     class="d-inline-block align-text-top me-2">
@@ -30,10 +30,11 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ms-auto mt-2">
+                <div class="navbar-nav ms-auto">
                     <a class="nav-link" href="beranda.php"><b>Beranda</b></a>
                     <a class="nav-link active" aria-current="page" href="organ.php"><b>Organ Manusia</b></a>
                     <a class="nav-link" href="peta.html"><b>Peta</b></a>
+                    <a class="nav-link border-success" href="https://wa.me/+6282131101770?text=Permisi%20dok%2C%0Asaya%20ingin%20bertanya%20mengenai%20Penyakit%20Mematikan%20di%20Indonesia!"><b>WA Dokter</b></a>
                     <a class="nav-link login" href="login-system/logout.php"><b>Logout</b></a>
                 </div>
             </div>

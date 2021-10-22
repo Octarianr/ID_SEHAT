@@ -27,22 +27,22 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ms-auto mt-2">
+                <div class="navbar-nav ms-auto">
                     <a class="nav-link active" aria-current="page" href="beranda.php"><b>Beranda</b></a>
                     <a class="nav-link" href="organ.php"><b>Organ Manusia</b></a>
-                    <a class="nav-link" href="peta.php"><b>Peta</b></a>
-                    <a class="nav-link border-success" href="https://wa.me/+6282131101770?text=Permisi%20dok%2C%0Asaya%20ingin%20bertanya%20mengenai%20Penyakit%20Mematikan%20di%20Indonesia!"><b>Chat WA</b></a>
+                    <a class="nav-link" href="#"><b>Peta</b></a>
+                    <a class="nav-link border-success" href="https://wa.me/+6282131101770?text=Permisi%20dok%2C%0Asaya%20ingin%20bertanya%20mengenai%20Penyakit%20Mematikan%20di%20Indonesia!"><b>WA Dokter</b></a>
                     <a class="nav-link login" href="login-system/logout.php"><b>Logout</b></a>
                 </div>
             </div>
         </div>
     </nav>
     <div class="hero">
-        <div class="container  p-lg-5 my-5">
+        <div class="container my-5">
             <div class="back-btn text-end">
                 <a href="beranda.php"><span class="material-icons md-36">highlight_off</span></a>
             </div>
-            <div class="contents p-md-5 mt-2">
+            <div class="contents p-lg-5 mt-4">
                 <h2>Penyakit Mematikan di Indonesia</h2><br>
                 <hr>
                 <h4>Stroke</h4>

@@ -48,13 +48,14 @@ p {
     transition: 0.5s;
 }
 .navbar.shrink {
-    padding: 0;
+    padding: 5px;
 }
 
 .nav-link {
     border: 2px solid var(--bs-light);
     border-radius: 30px;
-    margin: 0 20px;
+    margin: 10px 20px;
+    padding: 5px;
     text-align: center;
 }
 .nav-link:hover {
@@ -108,11 +109,4 @@ p {
     bottom: 32px;
     pointer-events: auto;
     opacity: 0.6;
-}
-
-.wa-btn {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    opacity: 0.8;
 }

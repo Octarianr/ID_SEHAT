@@ -41,14 +41,14 @@
                     <a class="nav-link active" aria-current="page" href="beranda.html"><b>Beranda</b></a>
                     <a class="nav-link" href="organ.php"><b>Organ Manusia</b></a>
                     <a class="nav-link" href="#"><b>Peta</b></a>
-                    <a class="nav-link border-success" href="https://wa.me/+6282131101770?text=Permisi%20dok%2C%0Asaya%20ingin%20bertanya%20mengenai%20Penyakit%20Mematikan%20di%20Indonesia!"><b>Chat WA</b></a>
+                    <a class="nav-link border-success" href="https://wa.me/+6282131101770?text=Permisi%20dok%2C%0Asaya%20ingin%20bertanya%20mengenai%20Penyakit%20Mematikan%20di%20Indonesia!"><b>WA Dokter</b></a>
                     <a class="nav-link login" href="login-system/logout.php"><b>Logout</b></a>
                 </div>
             </div>
         </div>
     </nav>
     <div class="hero">
-        <div class="container p-5 mb-5">
+        <div class="container p-4 my-5">
             <h1>Penyakit Mematikan<br>di Indonesia</h1>
             <hr> <br>
             <img src="assets/6796.png" class="img-fluid pb-4 float-end">
@@ -59,9 +59,6 @@
             <a href="penyakit.php"><button type="button" class="btn">Baca Selengkapnya</button></a>
         </div>
     </div>
-    <a href="#" class="to-top material-icons md-48">
-        keyboard_arrow_up
-    </a>
     <footer class="footer bg-light mt-5">
         <div class="container p-4">
             <div class="row">
@@ -89,6 +86,10 @@
             <hr>
         </div>
     </footer>
+
+    <a href="#" class="to-top material-icons md-48">
+        keyboard_arrow_up
+    </a>
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
