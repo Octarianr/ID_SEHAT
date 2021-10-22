@@ -1,4 +1,6 @@
 <?php
+  session_start();
+  
   require 'config.php';
 
   if (isset($_POST["masuk"])) {
@@ -15,7 +17,7 @@
       if (password_verify($pass, $row["password"])) {
         // session  
         $_SESSION["login"] = true;
-        
+
         header("Location: ../beranda.php");
         exit;
       }

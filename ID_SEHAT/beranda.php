@@ -39,8 +39,9 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
                     <a class="nav-link active" aria-current="page" href="beranda.html"><b>Beranda</b></a>
-                    <a class="nav-link" href="organ.html"><b>Organ Manusia</b></a>
+                    <a class="nav-link" href="organ.php"><b>Organ Manusia</b></a>
                     <a class="nav-link" href="#"><b>Peta</b></a>
+                    <a class="nav-link border-success" href="https://wa.me/+6282131101770?text=Permisi%20dok%2C%0Asaya%20ingin%20bertanya%20mengenai%20Penyakit%20Mematikan%20di%20Indonesia!"><b>Chat WA</b></a>
                     <a class="nav-link login" href="login-system/logout.php"><b>Logout</b></a>
                 </div>
             </div>
@@ -55,56 +56,7 @@
                 dihadapkan oleh beberapa penyakit. Baik itu ringan hingga paling mematikan sekalipun.</p>
             <p>Munculnya virus covid 19 dan akhirnya menjadi pandemik masyarakat melupakan bahwa terdapat penyakit lain
                 yang lebih mematikan di Indonesia daripada covid 19.</p>
-            <a href="penyakit.html"><button type="button" class="btn">Baca Selengkapnya</button></a>
-        </div>
-        <div class="container p-5 border-top" id="forum">
-            <div class="row">
-                <div class="col-lg-5 me-5">
-                    <h3 class="text-center mb-5">Konsultasikan<br>Keluhan Anda!</h3>
-                    <form action="#">
-                        <div class="form-floating">
-                            <input type="text" class="form-control" id="floatingInputValue">
-                            <label for="floatingInputValue">Nama Anda</label>
-                        </div>
-                        <br>
-                        <div class="form-floating">
-                            <textarea class="form-control" id="floatingTextarea" style="height: 100px;"></textarea>
-                            <label for="floatingTextarea">Tulis pertanyaan Anda</label>
-                        </div>
-                        <br>
-                        <button type="submit" class="btn" name="kirim">Kirim</button>
-                        <br><br>
-                    </form>
-                </div>
-                <div class="col-lg-6 border bg-light qna">
-                    <ul class="list-group my-4">
-                        <li class="list-group-item">
-                            <b>Nama1</b><br>
-                            first question
-                        </li>
-                        <li class="list-group-item ms-5 answer">
-                            <b>Dokter1</b><br>
-                            answer1
-                        </li><br>
-                        <li class="list-group-item">
-                            <b>Nama2</b><br>
-                            second question
-                        </li>
-                        <li class="list-group-item ms-5 answer">
-                            <b>Dokter1</b><br>
-                            answer2
-                        </li><br>
-                        <li class="list-group-item">
-                            <b>Nama3</b><br>
-                            third question
-                        </li><br>
-                        <li class="list-group-item">
-                            <b>Nama4</b><br>
-                            fourth question
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <a href="penyakit.php"><button type="button" class="btn">Baca Selengkapnya</button></a>
         </div>
     </div>
     <a href="#" class="to-top material-icons md-48">

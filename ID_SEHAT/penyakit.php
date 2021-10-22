@@ -7,48 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <!-- My CSS -->
     <link rel="stylesheet" href="artikelSlengkapnya.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!-- What's App -->
-    <a base target='_blank' href="https://wa.me/+6282131101770?text=Permisi%20dok%2C%0Asaya%20ingin%20bertanya%20mengenai%20Penyakit%20Mematikan%20di%20Indonesia!">
-    <img src="assets/wa.png" target='_blank'>>
-
     <title>Penyakit Mematikan di Indonesia | ID Sehat</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container py-2">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="assets/logo/logo.png" alt="" width="30" height="24"
-                    class="d-inline-block align-text-top me-2">
+                <img src="assets/logo/logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top me-2">
                 <b>ID Sehat</b>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto mt-2">
-                    <a class="nav-link active" aria-current="page" href="beranda.html"><b>Beranda</b></a>
-                    <a class="nav-link" href="organ.html"><b>Organ Manusia</b></a>
-                    <a class="nav-link" href="peta.html"><b>Peta</b></a>
-                    <a class="nav-link login" href="#"><b>Login</b></a>
+                    <a class="nav-link active" aria-current="page" href="beranda.php"><b>Beranda</b></a>
+                    <a class="nav-link" href="organ.php"><b>Organ Manusia</b></a>
+                    <a class="nav-link" href="peta.php"><b>Peta</b></a>
+                    <a class="nav-link border-success" href="https://wa.me/+6282131101770?text=Permisi%20dok%2C%0Asaya%20ingin%20bertanya%20mengenai%20Penyakit%20Mematikan%20di%20Indonesia!"><b>Chat WA</b></a>
+                    <a class="nav-link login" href="login-system/logout.php"><b>Logout</b></a>
                 </div>
             </div>
         </div>
     </nav>
     <div class="hero">
-        <div class="container  p-5 mb-5">
+        <div class="container  p-lg-5 my-5">
             <div class="back-btn text-end">
-                <a href="beranda.html"><span class="material-icons md-36">highlight_off</span></a>
+                <a href="beranda.php"><span class="material-icons md-36">highlight_off</span></a>
             </div>
-            <div class="contents p-md-5">
+            <div class="contents p-md-5 mt-2">
                 <h2>Penyakit Mematikan di Indonesia</h2><br>
                 <hr>
                 <h4>Stroke</h4>
@@ -124,21 +118,54 @@
                     kepala parah, mimisan, jantung berdebar-debar, dada sakit, serta gangguan penglihatan.</p>
             </div>
         </div>
-        <div class="container p-5 border" id="forum">
-            <h3 class="text-center mb-5">Konsultasikan<br>Keluhan Anda!</h3>
-            <form action="#">
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingInputValue">
-                    <label for="floatingInputValue">Nama Anda</label>
+        <div class="container p-lg-5 border-top" id="forum">
+            <div class="row">
+                <div class="col-lg-5 me-5">
+                    <h3 class="text-center mb-5">Konsultasikan<br>Keluhan Anda!</h3>
+                    <form action="#">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="floatingInputValue">
+                            <label for="floatingInputValue">Nama Anda</label>
+                        </div>
+                        <br>
+                        <div class="form-floating">
+                            <textarea class="form-control" id="floatingTextarea" style="height: 100px;"></textarea>
+                            <label for="floatingTextarea">Tulis pertanyaan Anda</label>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn" name="kirim">Kirim</button>
+                        <br><br>
+                    </form>
                 </div>
-                <br>
-                <div class="form-floating">
-                    <textarea class="form-control" id="floatingTextarea" style="height: 100px;"></textarea>
-                    <label for="floatingTextarea">Tulis pertanyaan Anda</label>
+                <div class="col-lg-6 border bg-light qna">
+                    <ul class="list-group my-4">
+                        <li class="list-group-item">
+                            <b>Nama1</b><br>
+                            first question
+                        </li>
+                        <li class="list-group-item ms-5 answer">
+                            <b>Dokter1</b><br>
+                            answer1
+                        </li><br>
+                        <li class="list-group-item">
+                            <b>Nama2</b><br>
+                            second question
+                        </li>
+                        <li class="list-group-item ms-5 answer">
+                            <b>Dokter1</b><br>
+                            answer2
+                        </li><br>
+                        <li class="list-group-item">
+                            <b>Nama3</b><br>
+                            third question
+                        </li><br>
+                        <li class="list-group-item">
+                            <b>Nama4</b><br>
+                            fourth question
+                        </li>
+                    </ul>
                 </div>
-                <br>
-                <button type="submit" class="btn">Kirim</button>
-            </form>
+            </div>
         </div>
     </div>
     <footer class="footer bg-light mt-5">
@@ -160,7 +187,7 @@
                         <h5><b>Contact</b></h5>
                         <ul>
                             <li><a href="#" style="color: #000;">aziz.19049@mhs.unesa.ac.id</a></li>
-                            <li><a href="#" style="color: #000;">Octarian.19020@mhs.unesa.ac.id</a></li>
+                            <li><a href="#" style="color: #000;">octarian.19020@mhs.unesa.ac.id</a></li>
                         </ul>
                     </div>
                 </div>
@@ -168,11 +195,14 @@
             <hr>
         </div>
     </footer>
+    <a href="#" class="to-top material-icons md-48">
+        keyboard_arrow_up
+    </a>
 
     <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+
 </body>
 
 </html>

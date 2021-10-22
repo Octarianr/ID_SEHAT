@@ -34,10 +34,23 @@ body {
     font-size: 36px;
     color: var(--bs-gray-dark);
 }
+a {
+    text-decoration: none;
+}
 p {
     text-align: justify;
     line-height: 30px;
 }
+
+.navbar {
+    background-color: var(--bs-light);
+    padding-bottom: 10px;
+    transition: 0.5s;
+}
+.navbar.shrink {
+    padding: 0;
+}
+
 .nav-link {
     border: 2px solid var(--bs-light);
     border-radius: 30px;
@@ -74,4 +87,32 @@ p {
 .contents img{
     width: 40vmax;
     padding: 20px;
+}
+
+/*to top button*/
+.material-icons.md-48{
+    font-size: 36px;
+    color: var(--bs-light);
+    background-color: var(--bs-gray);
+}
+.to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s;
+}
+.to-top.active {
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 0.6;
+}
+
+.wa-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    opacity: 0.8;
 }
