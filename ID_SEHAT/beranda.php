@@ -1,3 +1,13 @@
+<?php
+    session_start();
+
+    if (!isset($_SESSION["login"])) {
+        header("Location: login-system/login.php");
+        exit;
+    }
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -31,8 +41,7 @@
                     <a class="nav-link active" aria-current="page" href="beranda.html"><b>Beranda</b></a>
                     <a class="nav-link" href="organ.html"><b>Organ Manusia</b></a>
                     <a class="nav-link" href="#"><b>Peta</b></a>
-                    <a class="nav-link" href="#"><b>Forum</b></a>
-                    <a class="nav-link login" href="login-system/login.php"><b>Login</b></a>
+                    <a class="nav-link login" href="login-system/logout.php"><b>Logout</b></a>
                 </div>
             </div>
         </div>
@@ -63,7 +72,7 @@
                             <label for="floatingTextarea">Tulis pertanyaan Anda</label>
                         </div>
                         <br>
-                        <button type="submit" class="btn">Kirim</button>
+                        <button type="submit" class="btn" name="kirim">Kirim</button>
                         <br><br>
                     </form>
                 </div>
@@ -120,7 +129,7 @@
                         <h5><b>Contact</b></h5>
                         <ul>
                             <li><a href="#" style="color: #000;">aziz.19049@mhs.unesa.ac.id</a></li>
-                            <li><a href="#" style="color: #000;">aziz.19049@mhs.unesa.ac.id</a></li>
+                            <li><a href="#" style="color: #000;">seterusnya</a></li>
                         </ul>
                     </div>
                 </div>

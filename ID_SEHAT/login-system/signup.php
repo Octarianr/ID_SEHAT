@@ -3,9 +3,7 @@ require 'config.php';
 
 if (isset($_POST["register"])) {
   if (regist($_POST) > 0) {
-    echo "<script> 
-            alert('User berhasil terdaftar!');
-          </script>";
+    header("Location: login.php");
   } else {
     echo mysqli_error($conn);
   }

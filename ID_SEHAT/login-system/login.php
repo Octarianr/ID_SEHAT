@@ -1,26 +1,27 @@
 <?php
-require 'config.php';
+  require 'config.php';
 
-if (isset($_POST["masuk"])) {
+  if (isset($_POST["masuk"])) {
+    $email = $_POST["email"];
+    $pass = $_POST["password"];
 
-  $email = $_POST["email"];
-  $pass = $_POST["password"];
+    $result = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email'");
 
-  $result = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email'");
+    // cek email
+    if (mysqli_num_rows($result) === 1) {
 
-  // cek email
-  if (mysqli_num_rows($result) === 1) {
-
-    // cek pass
-    $row = mysqli_fetch_assoc($result);
-    if (password_verify($pass, $row["password"])) {
-      header("Location: ../beranda.php");
-      exit;
+      // cek pass
+      $row = mysqli_fetch_assoc($result);
+      if (password_verify($pass, $row["password"])) {
+        // session  
+        $_SESSION["login"] = true;
+        
+        header("Location: ../beranda.php");
+        exit;
+      }
     }
+    $error = true;
   }
-  $error = true;
-
-}
 ?>
 
 
