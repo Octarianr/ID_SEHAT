@@ -254,7 +254,7 @@
                             <h5><b>Contact</b></h5>
                             <ul>
                                 <li><a href="#" style="color: #000;">aziz.19049@mhs.unesa.ac.id</a></li>
-                                <li><a href="#" style="color: #000;">Octarian.19020@mhs.unesa.ac.id</a></li>
+                                <li><a href="#" style="color: #000;">octarian.19020@mhs.unesa.ac.id</a></li>
                             </ul>
                     </div>
                 </div>
