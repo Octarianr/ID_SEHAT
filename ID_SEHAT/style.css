@@ -16,7 +16,7 @@ body {
     --bs-teal: #20c997;
     --bs-cyan: #0dcaf0;
     --bs-white: #fff;
-    --bs-gray: #aaaaaa;
+    --bs-gray: #6c757d;
     --bs-gray-dark: #343a40;
     --bs-black: #000;
     --bs-primary: #FF6347;
@@ -29,21 +29,12 @@ body {
     --bs-dark: #212529;
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
 }
-
 a {
     text-decoration: none;
 }
 p {
     text-align: justify;
     line-height: 30px;
-}
-.navbar {
-    background-color: var(--bs-light);
-    padding-bottom: 10px;
-    transition: 0.5s;
-}
-.navbar.shrink {
-    padding: 0;
 }
 .nav-link {
     border: 2px solid var(--bs-light);
@@ -57,7 +48,6 @@ p {
 .login:hover {
     border: 2px solid var(--bs-secondary);
 }
-
 .container .img-fluid {
     width: 40vmax;
 }
@@ -91,25 +81,4 @@ table tr td a img {
 table tr td a p {
     color: var(--bs-black);
     text-align: center;
-}
-
-/*to top button*/
-.material-icons.md-48{
-    font-size: 36px;
-    color: var(--bs-light);
-    background-color: var(--bs-gray);
-}
-.to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 40px;
-    border-radius: 50%;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.5s;
-}
-.to-top.active {
-    bottom: 32px;
-    pointer-events: auto;
-    opacity: 1;
 }

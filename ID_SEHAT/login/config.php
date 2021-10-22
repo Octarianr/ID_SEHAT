@@ -3,7 +3,7 @@
 $server = "localhost";
 $user = "root";
 $pass = "";
-$database = "login_idsehat";
+$database = "idsehat_login";
  
 $conn = mysqli_connect($server, $user, $pass, $database);
  

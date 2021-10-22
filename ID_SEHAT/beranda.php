@@ -1,13 +1,3 @@
-<?php
-    session_start();
-
-    if (!isset($_SESSION["login"])) {
-        header("Location: login-system/login.php");
-        exit;
-    }
-
-?>
-
 <!doctype html>
 <html lang="en">
 
@@ -42,7 +32,7 @@
                     <a class="nav-link" href="organ.html"><b>Organ Manusia</b></a>
                     <a class="nav-link" href="#"><b>Peta</b></a>
                     <a class="nav-link" href="#"><b>Forum</b></a>
-                    <a class="nav-link login" href="login-system/logout.php"><b>Logout</b></a>
+                    <a class="nav-link login" href="login-system/login.php"><b>Login</b></a>
                 </div>
             </div>
         </div>
