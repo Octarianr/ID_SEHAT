@@ -41,7 +41,7 @@
                     <a class="nav-link active" aria-current="page" href="beranda.html"><b>Beranda</b></a>
                     <a class="nav-link" href="organ.php"><b>Organ Manusia</b></a>
                     <a class="nav-link" href="#"><b>Peta</b></a>
-                    <a class="nav-link border-success" href="https://wa.me/+6282131101770?text=Permisi%20dok%2C%0Asaya%20ingin%20bertanya%20mengenai%20Penyakit%20Mematikan%20di%20Indonesia!"><b>WA Dokter</b></a>
+                    <a class="nav-link material-icons md-36" href="https://wa.me/+6282131101770?text=Permisi%20dok%2C%0Asaya%20ingin%20bertanya%20mengenai%20Penyakit%20Mematikan%20di%20Indonesia!">whatsapp</a>
                     <a class="nav-link login" href="login-system/logout.php"><b>Logout</b></a>
                 </div>
             </div>
