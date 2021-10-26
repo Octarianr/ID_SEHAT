@@ -1,10 +1,10 @@
 <?php
-    session_start();
+session_start();
 
-    if (!isset($_SESSION["login"])) {
-        header("Location: login-system/login.php");
-        exit;
-    }
+if (!isset($_SESSION["login"])) {
+    header("Location: login-system/login.php");
+    exit;
+}
 
 ?>
 
@@ -77,8 +77,9 @@
                     <div class="card">
                         <h5><b>Contact</b></h5>
                         <ul>
+                            <li><a href="#" style="color: #000;">octarian.19049@mhs.unesa.ac.id</a></li>
                             <li><a href="#" style="color: #000;">aziz.19049@mhs.unesa.ac.id</a></li>
-                            <li><a href="#" style="color: #000;">seterusnya</a></li>
+                            <li><a href="#" style="color: #000;">alief.19011@mhs.unesa.ac.id</a></li>
                         </ul>
                     </div>
                 </div>
