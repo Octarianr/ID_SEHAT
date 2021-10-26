@@ -34,7 +34,6 @@
                     <a class="nav-link" href="beranda.php"><b>Beranda</b></a>
                     <a class="nav-link active" aria-current="page" href="organ.php"><b>Organ Manusia</b></a>
                     <a class="nav-link" href="peta.html"><b>Peta</b></a>
-                    <a class="nav-link border-success" href="https://wa.me/+6282131101770?text=Permisi%20dok%2C%0Asaya%20ingin%20bertanya%20mengenai%20Penyakit%20Mematikan%20di%20Indonesia!"><b>WA Dokter</b></a>
                     <a class="nav-link login" href="login-system/logout.php"><b>Logout</b></a>
                 </div>
             </div>
@@ -138,8 +137,10 @@
                     <div class="card">
                             <h5><b>Contact</b></h5>
                             <ul>
-                                <li><a href="#" style="color: #000;">aziz.19049@mhs.unesa.ac.id</a></li>
-                                <li><a href="#" style="color: #000;">Octarian.19020@mhs.unesa.ac.id</a></li>
+                                <li><a href="aziz.html" style="color: #000;">aziz.19049@mhs.unesa.ac.id</a></li>
+                                <li><a href="octarian.html" style="color: #000;">Octarian.19020@mhs.unesa.ac.id</a></li>
+                                <li><a href="alief.html" style="color: #000;">alief.19011@mhs.unesa.ac.id</a></li>
+                                <li><a href="alfin.html" style="color: #000;">Muhamad.19001@mhs.unesa.ac.id</a></li>
                             </ul>
                     </div>
                 </div>

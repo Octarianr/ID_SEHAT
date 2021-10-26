@@ -116,6 +116,11 @@
                 <p>Dengan mendeteksi risiko hipertensi sejak dini, Anda dapat terhindar dari risiko serangan jantung,
                     gagal jantung, stroke, dan gagal ginjal. Tanda-tanda hipertensi antara lain badan lemas, sakit
                     kepala parah, mimisan, jantung berdebar-debar, dada sakit, serta gangguan penglihatan.</p>
+
+                    
+            <a href="Kasus/Kasus.html"><button type="button" class="btn"><strong>Penyakit 2007 - 2009</strong></button></a>
+            <a href="Kasus/kasus2.html"><button type="button" class="btn"><Strong>Penyakit 2010 - 2012</Strong></button></a>
+            <a href="Kasus/kasus3.html"><button type="button" class="btn"><strong>Penyakit 2013 - 2015</strong></button></a>
             </div>
         </div>
         <div class="container p-lg-5 border-top" id="forum">
@@ -186,8 +191,10 @@
                     <div class="card">
                         <h5><b>Contact</b></h5>
                         <ul>
-                            <li><a href="#" style="color: #000;">aziz.19049@mhs.unesa.ac.id</a></li>
-                            <li><a href="#" style="color: #000;">octarian.19020@mhs.unesa.ac.id</a></li>
+                                <li><a href="contact-us/aziz.html" style="color: #000;">aziz.19049@mhs.unesa.ac.id</a></li>
+                                <li><a href="contact-us/octarian.html" style="color: #000;">Octarian.19020@mhs.unesa.ac.id</a></li>
+                                <li><a href="contact-us/alief.html" style="color: #000;">alief.19011@mhs.unesa.ac.id</a></li>
+                                <li><a href="contact-us/alfin.html" style="color: #000;">Muhamad.19001@mhs.unesa.ac.id</a></li>
                         </ul>
                     </div>
                 </div>
