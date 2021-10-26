@@ -77,9 +77,16 @@ if (!isset($_SESSION["login"])) {
                     <div class="card">
                         <h5><b>Contact</b></h5>
                         <ul>
+<<<<<<< HEAD
                             <li><a href="#" style="color: #000;">octarian.19049@mhs.unesa.ac.id</a></li>
                             <li><a href="#" style="color: #000;">aziz.19049@mhs.unesa.ac.id</a></li>
                             <li><a href="#" style="color: #000;">alief.19011@mhs.unesa.ac.id</a></li>
+=======
+                                <li><a href="contact-us/aziz.html" style="color: #000;">aziz.19049@mhs.unesa.ac.id</a></li>
+                                <li><a href="contact-us/octarian.html" style="color: #000;">Octarian.19020@mhs.unesa.ac.id</a></li>
+                                <li><a href="contact-us/alief.html" style="color: #000;">alief.19011@mhs.unesa.ac.id</a></li>
+                                <li><a href="contact-us/alfin.html" style="color: #000;">Muhamad.19001@mhs.unesa.ac.id</a></li>
+>>>>>>> d99ad4a4f7a2df5c1b313232321e43abd430aaae
                         </ul>
                     </div>
                 </div>
