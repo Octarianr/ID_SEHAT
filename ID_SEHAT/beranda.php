@@ -1,13 +1,3 @@
-<?php
-session_start();
-
-if (!isset($_SESSION["login"])) {
-    header("Location: login-system/login.php");
-    exit;
-}
-
-?>
-
 <!doctype html>
 <html lang="en">
 
@@ -42,7 +32,7 @@ if (!isset($_SESSION["login"])) {
                     <a class="nav-link" href="organ.php"><b>Organ Manusia</b></a>
                     <a class="nav-link" href="#"><b>Peta</b></a>
                     <a class="nav-link material-icons md-36" href="https://wa.me/+6282131101770?text=Permisi%20dok%2C%0Asaya%20ingin%20bertanya%20mengenai%20Penyakit%20Mematikan%20di%20Indonesia!">whatsapp</a>
-                    <a class="nav-link login" href="login-system/logout.php"><b>Logout</b></a>
+                    <a class="nav-link login" href="login-system/login.php"><b>Login</b></a>
                 </div>
             </div>
         </div>
@@ -77,16 +67,10 @@ if (!isset($_SESSION["login"])) {
                     <div class="card">
                         <h5><b>Contact</b></h5>
                         <ul>
-<<<<<<< HEAD
                             <li><a href="#" style="color: #000;">octarian.19049@mhs.unesa.ac.id</a></li>
                             <li><a href="#" style="color: #000;">aziz.19049@mhs.unesa.ac.id</a></li>
                             <li><a href="#" style="color: #000;">alief.19011@mhs.unesa.ac.id</a></li>
-=======
-                                <li><a href="contact-us/aziz.html" style="color: #000;">aziz.19049@mhs.unesa.ac.id</a></li>
-                                <li><a href="contact-us/octarian.html" style="color: #000;">Octarian.19020@mhs.unesa.ac.id</a></li>
-                                <li><a href="contact-us/alief.html" style="color: #000;">alief.19011@mhs.unesa.ac.id</a></li>
-                                <li><a href="contact-us/alfin.html" style="color: #000;">Muhamad.19001@mhs.unesa.ac.id</a></li>
->>>>>>> d99ad4a4f7a2df5c1b313232321e43abd430aaae
+                            <li><a href="#" style="color: #000;">muhammad.19001@mhs.unesa.ac.id</a></li>
                         </ul>
                     </div>
                 </div>

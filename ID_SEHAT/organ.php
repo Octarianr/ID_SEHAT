@@ -137,10 +137,10 @@
                     <div class="card">
                             <h5><b>Contact</b></h5>
                             <ul>
-                                <li><a href="aziz.html" style="color: #000;">aziz.19049@mhs.unesa.ac.id</a></li>
-                                <li><a href="octarian.html" style="color: #000;">Octarian.19020@mhs.unesa.ac.id</a></li>
-                                <li><a href="alief.html" style="color: #000;">alief.19011@mhs.unesa.ac.id</a></li>
-                                <li><a href="alfin.html" style="color: #000;">Muhamad.19001@mhs.unesa.ac.id</a></li>
+                                <li><a href="contact-us/aziz.html" style="color: #000;">aziz.19049@mhs.unesa.ac.id</a></li>
+                                <li><a href="contact-us/octarian.html" style="color: #000;">Octarian.19020@mhs.unesa.ac.id</a></li>
+                                <li><a href="contact-us/alief.html" style="color: #000;">alief.19011@mhs.unesa.ac.id</a></li>
+                                <li><a href="contact-us/alfin.html" style="color: #000;">Muhamad.19001@mhs.unesa.ac.id</a></li>
                             </ul>
                     </div>
                 </div>
