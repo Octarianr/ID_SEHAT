@@ -8,7 +8,7 @@ if (!$conn) {
 
 function regist($data) {
     global $conn;
-
+    
     $email = $data["email"];
     $pass = $data["password"];
     $cpass = $data["cpassword"];

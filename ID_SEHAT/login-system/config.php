@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect("localhost", "root", "", "login_idsehat");
+$conn = mysqli_connect("localhost", "root", "", "multi_user");
 
 if (!$conn) {
     die("<script>alert('Gagal tersambung dengan database.')</script>");
