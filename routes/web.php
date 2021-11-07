@@ -4,9 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\BlogPostController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OrganController;
-use App\Models\Blog;
+use App\Http\Controllers\ForumController;
 
 /*
 |--------------------------------------------------------------------------

@@ -166,18 +166,12 @@
         <div class="row justify-content-center">
             <div class="col-lg-9">
                 <h3>10 Penyakit Paling Mematikan di Indonesia <br> Menurut WHO Tahun 2012</h3>
-                <ol type="1">
-                    <li><a href="penyakit/stroke.html"><b>Stroke 21%</b></a></li>
-                    <li><a href="penyakit/jantung.html"><b>Jantung 9%</b></a></li>
-                    <li><a href="penyakit/diabetes.html"><b>Diabetes 7%</b></a></li>
-                    <li><a href="penyakit/infeksi_saluran_pernafasan.html"><b>nfeksi Saluran Pernapasan 5%</b></a></li>
-                    <li><a href="penyakit/tbc.html"><b>TBC 4%</b></a></li>
-                    <li><a href="penyakit/sirosis_hati.html"><b>Sirosis Hati 3%</b></a></li>
-                    <li><a href="penyakit/copd.html"><b>Penyakit Paru Obstruktif Kronik 3%</b></a></li>
-                    <li><a href="penyakit/kecelakaan.html"><b>Kecelakaan 3%</b></a></li>
-                    <li><a href="penyakit/iskemia.html"><b>Iskemia 3%</b></a></li>
-                    <li><a href="penyakit/ginjal.html"><b>Penyakit Ginjal 3%</b></a></li>
-                </ol>
+                @foreach ($posts as $post)
+                    <a class="mx-4 mb-2 text-center" href="../posts/{{ $post->slug }}"><img
+                            src="{{ asset('storage/' . $post->image) }}" width="72">
+                        <p>{{ $post->category }}</p>
+                    </a>
+                @endforeach
 
                 <a href="datapenyakit.html"><button type="button" class="btn"><strong>Baca
                             Selengkapnya</strong></button></a>

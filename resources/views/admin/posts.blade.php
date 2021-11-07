@@ -2,7 +2,7 @@
 
 @section('container')
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Blog Organ</h1>
+        <h1 class="h2">Postingan</h1>
     </div>
 
     @if (session()->has('success'))
@@ -13,7 +13,7 @@
     @endif
 
     <div class="table-responsive mx-4 col-lg-8">
-        <a href="/blogs/create" class="btn btn-primary mb-2">Buat Baru</a>
+        <a href="/posts/create" class="btn btn-primary mb-2">Buat Baru</a>
         <table class="table table-striped table-sm">
             <thead>
                 <tr>
@@ -23,13 +23,14 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($blogs as $blog)
+                @foreach ($posts as $post)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $blog->title }}</td>
+                        <td>{{ $post->title }}</td>
                         <td>
-                            <a href="/blogs/{{ $blog->slug }}/edit" class="btn btn-warning py-0">Edit</a>
-                            <form action="/blogs/{{ $blog->slug }}" method="POST" class="d-inline">
+                            <a href="/posts/{{ $post->slug }}" class="btn btn-warning py-0">Edit</a>
+                            <a href="/posts/{{ $post->slug }}/edit" class="btn btn-warning py-0">Edit</a>
+                            <form action="/posts/{{ $post->slug }}" method="POST" class="d-inline">
                                 @method('delete')
                                 @csrf
                                 <button class="btn btn-danger py-0" onclick="return confirm('Are you sure?')">Hapus</button>

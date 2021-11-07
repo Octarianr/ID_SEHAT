@@ -54,6 +54,11 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link {{ Request::is('posts*') ? 'active' : '' }}" href="/posts">
+                                Posts
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="/" class="nav-link">Homepage</a>
                         </li>
                         <hr>
