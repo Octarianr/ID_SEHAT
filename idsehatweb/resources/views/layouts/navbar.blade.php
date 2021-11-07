@@ -14,6 +14,7 @@
                 <a class="nav-link mx-2" href="/">Beranda</a>
                 <a class="nav-link mx-2" href="/organ-manusia">Organ Manusia</a>
                 <a class="nav-link mx-2" href="/kasus-penyakit-di-indonesia">Kasus</a>
+                <a class="nav-link mx-2" href="/forum">Forum</a>
                 @auth
                     <div class="dropdown">
                         <a class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton1"

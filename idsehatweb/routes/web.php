@@ -56,3 +56,9 @@ Route::get('/dashboard', function () {
 })->middleware('auth');
 
 Route::resource('/blogs', BlogController::class)->middleware('auth');
+
+Route::resource('/posts', BlogPostController::class)->middleware('auth');
+
+
+// forum
+Route::resource('/forum', ForumController::class);
