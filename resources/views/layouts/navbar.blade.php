@@ -17,14 +17,16 @@
                 <a class="nav-link mx-2" href="/forum">Forum</a>
                 @auth
                     <div class="dropdown">
-                        <a class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton1"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                            aria-expanded="false">
                             {{ auth()->user()->name }}
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenu2">
-                            <li>
-                                <a href="/dashboard" class="nav-link text-center">Dashboard</a>
-                            </li>
+                            @if (auth()->user()->is_admin)
+                                <li>
+                                    <a href="/dashboard" class="nav-link text-center">Dashboard</a>
+                                </li>
+                            @endif
                             <li>
                                 <form action="/logout" method="POST">
                                     @csrf

@@ -8,6 +8,7 @@ use App\Http\Controllers\BlogPostController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OrganController;
 use App\Http\Controllers\ForumController;
+use App\Http\Controllers\ResetPasswordController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,12 +55,10 @@ Route::post('/register', [RegisterController::class, 'store']);
 // admin
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
-})->middleware('auth');
+})->middleware('admin');
 
-Route::resource('/blogs', BlogController::class)->middleware('auth');
+Route::resource('/blogs', BlogController::class);
 
-Route::resource('/posts', BlogPostController::class)->middleware('auth');
-
-
-// forum
-Route::resource('/forum', ForumController::class);
+// lupa password
+// Route::get('/forgot-password', [ResetPasswordController::class, 'forgot'])->middleware('guest');
+// Route::post('/forgot-password', [ResetPasswordController::class, 'reset']);

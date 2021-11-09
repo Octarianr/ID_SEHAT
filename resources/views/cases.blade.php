@@ -6,8 +6,9 @@
             <div class="col-lg-9">
                 <img src="/img/Peta.png" class="img img-fluid">
             </div>
+            <hr> 
             <div class="col-lg-9">
-                <hr> <br>
+                <br>
                 <h4>Lebih dari 50 persen kematian di Indonesia disebabkan oleh penyakit yang menyerang organ
                     vital manusia. Stroke menjadi penyakit paling mematikan, lebih dari 20 persen kematian disebabkan oleh
                     penyakit ini.</h4>
@@ -166,14 +167,14 @@
         <div class="row justify-content-center">
             <div class="col-lg-9">
                 <h3>10 Penyakit Paling Mematikan di Indonesia <br> Menurut WHO Tahun 2012</h3>
-                @foreach ($posts as $post)
+                {{-- @foreach ($posts as $post)
                     <a class="mx-4 mb-2 text-center" href="../posts/{{ $post->slug }}"><img
                             src="{{ asset('storage/' . $post->image) }}" width="72">
                         <p>{{ $post->category }}</p>
                     </a>
-                @endforeach
+                @endforeach --}}
 
-                <a href="datapenyakit.html"><button type="button" class="btn"><strong>Baca
+                <a href="/posts"><button type="button" class="btn"><strong>Baca
                             Selengkapnya</strong></button></a>
             </div>
         </div>

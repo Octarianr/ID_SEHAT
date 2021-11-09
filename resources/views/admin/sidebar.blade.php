@@ -13,6 +13,7 @@
 
     <!-- Custom styles for this template -->
     <link href="/css/dashboard.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="/css/trix.css">
 
     <script type="text/javascript" src="/js/trix.js"></script>
@@ -51,11 +52,6 @@
                         <li class="nav-item">
                             <a class="nav-link {{ Request::is('blogs*') ? 'active' : '' }}" href="/blogs">
                                 Blogs
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {{ Request::is('posts*') ? 'active' : '' }}" href="/posts">
-                                Posts
                             </a>
                         </li>
                         <li class="nav-item">

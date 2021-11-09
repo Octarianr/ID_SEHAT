@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use Illuminate\Auth\Middleware\Authorize;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -15,6 +16,7 @@ class BlogController extends Controller
      */
     public function index()
     {
+        $this->authorize('admin');
         return view('admin.blogs', [
             "blogs" => Blog::all()
         ]);
@@ -27,6 +29,7 @@ class BlogController extends Controller
      */
     public function create()
     {
+        $this->authorize('admin');
         return view('admin.create');
     }
 
@@ -63,6 +66,7 @@ class BlogController extends Controller
      */
     public function show(Blog $blog)
     {
+
         return view('admin.show', [
             'blog' => $blog
         ]);
@@ -76,6 +80,7 @@ class BlogController extends Controller
      */
     public function edit(Blog $blog)
     {
+        $this->authorize('admin');
         return view('admin.edit', [
             'blog' => $blog
         ]);

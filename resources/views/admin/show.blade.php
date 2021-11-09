@@ -8,7 +8,7 @@
             <h2>{!! $blog->title !!}</h2>
             <hr>
             @if ($blog->image)
-                <img class="float-md-end px-4 pt-2 pb-4" src="{{ asset('storage/' . $blog->image) }}" style="width: 360px">
+                <img class="float-md-end px-4 pt-2 pb-4" src="{{ asset('storage/' . $blog->image) }}" style="width: 240px">
             @endif
             {!! $blog->body !!}
         </div>

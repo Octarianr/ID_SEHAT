@@ -10,7 +10,7 @@
 
                 {{-- ganti dengan data dari database untuk forum nanti --}}
                 {{-- urutan dari postingan yang terbaru --}}
-                <div class="row my-4">
+                {{-- <div class="row my-4">
                     <a href="#">
                         <h5>Disini potongan pertanyaan 1 (atau excerpt) dari pengguna, klik untuk baca selengkapnya...</h5>
                     </a>
@@ -30,8 +30,17 @@
                     </a>
                     <small>oleh {{ "'nama penanya (dari data)'" }} tentang {{ "'topik'" }} pada {{ "'waktu publikasi'" }}</small>
                 </div>
-                <hr>
+                <hr> --}}
             </div>
+
+            @foreach ($forums as $forum)
+                <div class="row my-4">
+                    <a href="#">
+                        <h5>{{ $forum->topic }}</h5>
+                    </a>
+                    <small>{!! $forum->content !!}</small>
+                </div>
+            @endforeach
         </div>
     </div>
 @endsection

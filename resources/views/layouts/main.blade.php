@@ -31,8 +31,8 @@
                 <i class="bi bi-arrow-up-circle d-block" style="font-size: 2.4rem;"></i>
             </a>
         </div>
-        <a
-            href="https://wa.me/+6282131101770?text=Permisi%20dok%2C%0Asaya%20ingin%20bertanya%20mengenai%20Penyakit%20Mematikan%20di%20Indonesia!" target="_blank">
+        <a href="https://wa.me/+6282131101770?text=Permisi%20dok%2C%0Asaya%20ingin%20bertanya%20mengenai%20Penyakit%20Mematikan%20di%20Indonesia!"
+            target="_blank">
             <i class="bi bi-whatsapp d-block" style="font-size: 2.4rem"></i>
         </a>
     </div>
@@ -44,6 +44,7 @@
 
     {{-- Personal JS di folder public --}}
     <script src="/js/script.js"></script>
+    
 </body>
 
 </html>
