@@ -4,9 +4,10 @@
     <div class="container p-3">
         <div class="row justify-content-center mt-5">
             <div class="col-md-7">
-                <a href="/organ-manusia" class="btn text-white mb-4" style="background-color: #ff6347;">Kembali</a>
-                <h2>Anatomi Tubuh Manusia</h2>
-                <hr><br>
+                <a href="/organ-manusia"><i class="bi bi-arrow-left me-1"></i>Kembali</a>
+                <hr>
+                <h3>Anatomi Tubuh Manusia</h3>
+                <br>
                 <h5>1. Sistem Rangka</h5>
                 <img class="img mb-2" src="/img/anatomi/rangka.jpg">
                 <p>Tubuh manusia didukung oleh sistem rangka, yang terdiri dari 206 tulang yang dihubungkan oleh tendon,

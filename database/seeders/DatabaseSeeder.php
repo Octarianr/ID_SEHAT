@@ -15,19 +15,23 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::create([
-            'name' => 'Admin',
-            'email' => 'admin@email.com',
-            'password' => bcrypt('admin123')
-        ]);
+        // User::create([
+        //     'name' => 'Admin',
+        //     'email' => 'admin@email.com',
+        //     'password' => bcrypt('admin123')
+        // ]);
 
-        User::create([
-            'name' => 'Dr. Sehat',
-            'email' => 'drsehat@email.com',
-            'password' => bcrypt('dokter123')
-        ]);
+        // User::create([
+        //     'name' => 'Dr. Sehat',
+        //     'email' => 'drsehat@email.com',
+        //     'password' => bcrypt('dokter123')
+        // ]);
 
-        \App\Models\User::factory(3)->create();
+        
+        // \App\Models\User::factory(5)->create();
+        // \App\Models\Topic::factory(20)->create();
+        \App\Models\Comment::factory(40)->create();
+
 
         // Blog::create([
         //     'title' => "",

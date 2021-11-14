@@ -62,3 +62,10 @@ Route::resource('/blogs', BlogController::class);
 // lupa password
 // Route::get('/forgot-password', [ResetPasswordController::class, 'forgot'])->middleware('guest');
 // Route::post('/forgot-password', [ResetPasswordController::class, 'reset']);
+
+// Forum index
+Route::get('/forum', [ForumController::class, 'index'])->middleware('auth');
+Route::post('/forum/create', [ForumController::class, 'create']);
+// Single forum
+Route::get('/forum/{topic:slug}', [ForumController::class, 'show']);
+Route::post('/forum/{topic:slug}', [ForumController::class, 'store']); // store comment

@@ -4,9 +4,10 @@
     <div class="container p-3">
         <div class="row justify-content-center mt-5">
             <div class="col-md-7">
-                <a href="/" class="btn text-white mb-4" style="background-color: #ff6347;">Kembali</a>
-                <h2>Penyakit Mematikan di Indonesia</h2>
-                <hr><br>
+                <a href="/"><i class="bi bi-arrow-left me-1"></i>Kembali</a>
+                <hr>
+                <h3>Penyakit Mematikan di Indonesia</h3>
+                <br>
                 <h5><strong>Stroke</strong></h5>
                 <img src="/img/gambar/stroke.jpg" class="img-fluid"><br><br>
                 <p>Berdasarkan hasil survei Sample Registration System (SRS) Indonesia tahun 2014, stroke merupakan

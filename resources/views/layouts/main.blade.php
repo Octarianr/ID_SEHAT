@@ -12,7 +12,68 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
 
     {{-- Personal CSS di folder public --}}
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <style>
+        * {
+            scroll-behavior: smooth;
+            font-family: sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            transition: all 0.25s;
+        }
+
+        a:hover {
+            color: #ff5555;
+        }
+
+        .btn.btn-default {
+            background-color: #ff5555;
+            border: 1px solid unset;
+            color: white;
+            transition: all 0.5s;
+        }
+        .btn.btn-default:hover {
+            background-color: unset;
+            border: 1px solid #ff5555;
+            color: #ff5555;
+        }
+
+        .btn.btn-primary {
+            background-color: unset;
+            border: 1px solid #ff5555;
+            color: #ff5555;
+            transition: all 0.5s;
+        }
+
+        .btn.btn-primary:hover {
+            background-color: #ff5555;
+            border: 1px solid unset;
+            color: white;
+        }
+
+        .addons {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            opacity: 0.8;
+        }
+
+        .to-top {
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.5s;
+        }
+
+        .to-top.active {
+            pointer-events: auto;
+            opacity: 1;
+        }
+
+    </style>
 
     <title>ID Sehat</title>
 
@@ -25,15 +86,17 @@
 
     @include('layouts.footer')
 
+    @yield('others')
+
     <div class="addons">
         <div class="to-top">
             <a href="#">
-                <i class="bi bi-arrow-up-circle d-block" style="font-size: 2.4rem;"></i>
+                <i class="bi bi-arrow-up-circle d-block" style="font-size: 2rem;"></i>
             </a>
         </div>
         <a href="https://wa.me/+6282131101770?text=Permisi%20dok%2C%0Asaya%20ingin%20bertanya%20mengenai%20Penyakit%20Mematikan%20di%20Indonesia!"
             target="_blank">
-            <i class="bi bi-whatsapp d-block" style="font-size: 2.4rem"></i>
+            <i class="bi bi-whatsapp d-block" style="font-size: 2rem"></i>
         </a>
     </div>
 
@@ -43,8 +106,26 @@
     </script>
 
     {{-- Personal JS di folder public --}}
-    <script src="/js/script.js"></script>
-    
+    <script>
+        const toTop = document.querySelector(".to-top");
+
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 100) {
+                toTop.classList.add("active");
+            } else {
+                toTop.classList.remove("active");
+            }
+        })
+    </script>
+
+    <script>
+        var myModal = document.getElementById('myModal')
+        var myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('shown.bs.modal', function() {
+            myInput.focus()
+        })
+    </script>
 </body>
 
 </html>

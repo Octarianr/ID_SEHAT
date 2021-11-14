@@ -14,7 +14,7 @@
                     untuk bertahan hidup. Kehilangan fungsi total dari salah satu organ vital tersebut berarti akan
                     terjadi kematian. Hebatnya, tubuh manusia dapat bertahan hidup tanpa banyak organ lain atau
                     dengan mengganti organ yang tidak berfungsi dengan alat kesehatan.</p>
-                <a class="btn text-light" href="/articles/anatomi-tubuh-manusia" role="button" style="background-color: #ff6347;">Baca
+                <a class="btn btn-default" href="/articles/anatomi-tubuh-manusia" role="button">Baca
                     Selengkapnya...</a>
                 <hr><br>
             </div>

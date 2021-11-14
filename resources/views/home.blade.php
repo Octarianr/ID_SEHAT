@@ -10,7 +10,7 @@
                     dihadapkan oleh beberapa penyakit. Baik itu ringan hingga paling mematikan sekalipun.</p>
                 <p>Munculnya virus covid 19 dan akhirnya menjadi pandemik masyarakat melupakan bahwa terdapat penyakit lain
                     yang lebih mematikan di Indonesia daripada covid 19.</p>
-                <a class="btn text-light" href="/articles/penyakit-mematikan-di-indonesia" role="button" style="background-color: #ff6347;">Baca Selengkapnya...</a>
+                <a class="btn btn-default" href="/articles/penyakit-mematikan-di-indonesia" role="button">Baca Selengkapnya...</a>
             </div>
             <div class="col-lg-7 mt-4">
                 <img src="/img/6796.png" class="img-fluid pb-4 float-end">
