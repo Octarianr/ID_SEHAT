@@ -10,22 +10,27 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ms-auto my-2 text-center">
-                <a class="nav-link mx-2" href="/">Beranda</a>
-                <a class="nav-link mx-2" href="/organ-manusia">Organ Manusia</a>
-                <a class="nav-link mx-2" href="/kasus-penyakit-di-indonesia">Kasus</a>
-                <a class="nav-link mx-2" href="/forum">Forum</a>
+            <div class="navbar-nav ms-auto mt-2 text-center">
+                <a class="nav-link m-2" href="/">Beranda</a>
+                <a class="nav-link m-2" href="/organ-manusia">Organ Manusia</a>
+                <a class="nav-link m-2" href="/kasus-penyakit-di-indonesia">Kasus</a>
+                <a class="nav-link m-2" href="/forum">Forum</a>
+                <hr class="dropdown-divider">
                 @auth
                     <div class="dropdown">
-                        <a class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle mx-2" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            {{ auth()->user()->name }}
+                            <i class="bi bi-person" style="font-size: 1.5rem;"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenu2">
                             @if (auth()->user()->is_admin)
                                 <li>
-                                    <a href="/dashboard" class="nav-link text-center">Dashboard</a>
+                                    <a href="/dashboard" class="nav-link text-center">{{ auth()->user()->name }}</a>
                                 </li>
+                            @else
+                            <li>
+                                <a href="#" class="nav-link text-center">{{ auth()->user()->name }}</a>
+                            </li>
                             @endif
                             <li>
                                 <form action="/logout" method="POST">
@@ -36,7 +41,7 @@
                         </ul>
                     </div>
                 @else
-                    <a class="nav-link mx-2" href="/login">Login</a>
+                    <a class="nav-link m-2" href="/login">Login</a>
                 @endauth
             </div>
         </div>

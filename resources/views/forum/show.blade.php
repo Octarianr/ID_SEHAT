@@ -14,6 +14,7 @@
                 <br><br>
                 <p>{{ $topic->content }}</p>
 
+
                 <div class="p-2">
                     <a class="text-decoration-underline" onclick="toggle()" style="cursor: pointer;"><small>Jawab
                             disini...</small></a>
@@ -30,8 +31,10 @@
                 </div>
                 <hr>
             </div>
+
+
             <div class="col-lg-8">
-                <h5><strong style="color: tomato">Jawaban</strong></h5>
+                <h5 class="mb-3"><strong style="color: tomato">Jawaban</strong></h5>
                 @if (session()->has('success'))
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
                         {{ session('success') }}
@@ -42,11 +45,36 @@
                 <ul class="list-unstyled">
                     @foreach ($topic->comment->where('parent', 0) as $komen)
                         <li>
-                            <small>
-                                <strong>{{ $komen->user->name }} ({{ $komen->user->email }})</strong><span
-                                    class="text-muted"> - {{ $komen->created_at->diffForHumans() }}</span>
-                                <p>{{ $komen->content }}</p>
-                            </small>
+                            @if ($komen->user->email == 'drsehat@email.com')
+                                <small>
+                                    <strong style="color: #ff5555;">{{ $komen->user->name }} ({{ $komen->user->email }})</strong><span
+                                        class="text-muted"> - {{ $komen->created_at->diffForHumans() }}</span>
+                                    <p>{{ $komen->content }}</p>
+                                </small>
+                            @else
+                                <small>
+                                    <strong>{{ $komen->user->name }} ({{ $komen->user->email }})</strong><span
+                                        class="text-muted"> - {{ $komen->created_at->diffForHumans() }}</span>
+                                    <p>{{ $komen->content }}</p>
+                                </small>
+                            @endif
+                            <div class="dropdown mb-2">
+                                <a class="text-decoration-underline" href="#" id="dropdownMenuClickable" data-bs-toggle="dropdown"
+                                    data-bs-auto-close="false" aria-expanded="false">
+                                    <small>Jawab</small>
+                                </a>
+                                <div class="dropdown-menu bg-light" style="width: 100%"
+                                    aria-labelledby="dropdownMenuClickable">
+                                    <form action="" method="POST" class="p-2" id="comment-form2">
+                                        @csrf
+                                        <input type="hidden" name="topic_id" value="{{ $topic->id }}">
+                                        <input type="hidden" name="parent" value="{{ $komen->id }}">
+                                        <textarea class="form-control" placeholder="Tulis jawaban Anda"
+                                            name="floatingTextarea" id="content" rows="3"></textarea>
+                                        <input type="submit" class="btn btn-primary btn-sm my-2" value="Kirim">
+                                    </form>
+                                </div>
+                            </div>
                             <ul class="list-unstyled">
                                 @foreach ($komen->child as $anak)
                                     <li class="ms-4">
@@ -57,36 +85,8 @@
                                             <p>{{ $anak->content }}</p>
                                         </small>
                                     </li>
-                                    {{-- <div class="p-2">
-                                        <a class="text-decoration-underline" onclick="toggleC()"
-                                            style="cursor: pointer;"><small>Jawab
-                                                disini...</small></a>
-                                        <form action="" method="POST" class="p-2" id="comment-form2">
-                                            @csrf
-                                            <input type="hidden" name="topic_id" value="{{ $topic->id }}">
-                                            <input type="hidden" name="parent" value="{{ $komen->id }}">
-                                            <textarea class="form-control" name="content" id="content"
-                                                rows="3"></textarea>
-                                            <input type="submit" class="btn btn-primary btn-sm my-2" value="Kirim">
-                                        </form>
-                                    </div> --}}
                                 @endforeach
                             </ul>
-                            <div class="dropdown">
-                                <a class="dropdown-toggle" href="#" id="dropdownMenuClickable" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
-                                    <small>Jawab</small>
-                                </a>
-                                <div class="dropdown-menu bg-light" style="width: 100%" aria-labelledby="dropdownMenuClickable">
-                                    <form action="" method="POST" class="p-2" id="comment-form2">
-                                        @csrf
-                                        <input type="hidden" name="topic_id" value="{{ $topic->id }}">
-                                        <input type="hidden" name="parent" value="{{ $komen->id }}">
-                                        <textarea class="form-control" placeholder="Tulis jawaban Anda" name="floatingTextarea" id="content"
-                                            rows="3"></textarea>
-                                        <input type="submit" class="btn btn-primary btn-sm my-2" value="Kirim">
-                                    </form>
-                                </div>
-                            </div>
                             <hr>
                         </li>
                     @endforeach

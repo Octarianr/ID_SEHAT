@@ -9,7 +9,15 @@ use Illuminate\Http\Request;
 class ForumController extends Controller
 {
     public function index() {
-        $topic = Topic::orderBy('created_at', 'desc')->paginate(10);
+        
+        $result = Topic::latest();
+
+        if (request('search')) {
+            $result->where('topic', 'like', '%' . request('search') . '%')
+                    ->orWhere('content', 'like', '%' . request('search') . '%');
+        }
+
+        $topic = $result->paginate(6)->withQueryString();
         return view('forum.index', compact(['topic']));
     }
 

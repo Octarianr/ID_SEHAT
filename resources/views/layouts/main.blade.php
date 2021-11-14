@@ -36,6 +36,7 @@
             color: white;
             transition: all 0.5s;
         }
+
         .btn.btn-default:hover {
             background-color: unset;
             border: 1px solid #ff5555;
@@ -58,7 +59,7 @@
         .addons {
             position: fixed;
             bottom: 1rem;
-            right: 1rem;
+            right: 1.8rem;
             opacity: 0.8;
         }
 
@@ -71,6 +72,25 @@
         .to-top.active {
             pointer-events: auto;
             opacity: 1;
+        }
+
+        [aria-current] .page-link {
+            background-color: #ff5555 !important;
+            border: 1px solid #ced4da !important;
+        }
+
+        [rel='prev'],
+        [rel='next'] {
+            color: #808080;
+            
+        }
+        [rel='prev']:hover,
+        [rel='next']:hover {
+            color: #ff5555;
+        }
+
+        .pagination>li :not([rel='prev'], [rel='next'], [aria-current] .page-link) {
+            color: #808080;
         }
 
     </style>

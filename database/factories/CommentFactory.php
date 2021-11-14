@@ -20,7 +20,8 @@ class CommentFactory extends Factory
         return [
             'content' => $this->faker->text(50, 200),
             'user_id' => mt_rand(1, 10),
-            'topic_id' => mt_rand(5, 20)
+            'topic_id' => mt_rand(5, 20),
+            'parent' => mt_rand(1,30)
         ];
     }
 }

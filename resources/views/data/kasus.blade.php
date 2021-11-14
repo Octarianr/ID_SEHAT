@@ -2,7 +2,8 @@
 
 @section('container')
     <div class="container py-4 mt-4">
-        <a href="../kasus-penyakit-di-indonesia" class="btn text-white mb-4" style="background-color: #ff6347;">Kembali</a>
+        <a href="../kasus-penyakit-di-indonesia"><i class="bi bi-arrow-left me-1"></i>Kembali</a>
+        <br><br>
         <h3>Data Jumlah Kasus</h3>
         <div class="row justify-content-center mt-4">
             <iframe

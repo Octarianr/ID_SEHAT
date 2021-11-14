@@ -159,23 +159,7 @@
                     tubuh anda. Hindari aktivitas merokok dan juga kurangi makanan cepat saji (junkfood).</p>
             </div>
             <div class="col-lg-9">
-                <a href="/kasus-penyakit-di-indonesia/data-kasus" class="btn text-light" role="button"
-                    style="background-color: #ff6347;">Lihat data kasus...</a>
-            </div>
-        </div>
-        <hr>
-        <div class="row justify-content-center">
-            <div class="col-lg-9">
-                <h3>10 Penyakit Paling Mematikan di Indonesia <br> Menurut WHO Tahun 2012</h3>
-                {{-- @foreach ($posts as $post)
-                    <a class="mx-4 mb-2 text-center" href="../posts/{{ $post->slug }}"><img
-                            src="{{ asset('storage/' . $post->image) }}" width="72">
-                        <p>{{ $post->category }}</p>
-                    </a>
-                @endforeach --}}
-
-                <a href="/posts"><button type="button" class="btn"><strong>Baca
-                            Selengkapnya</strong></button></a>
+                <a href="/kasus-penyakit-di-indonesia/data-kasus" class="btn btn-primary" role="button">Lihat data kasus...</a>
             </div>
         </div>
     </div>

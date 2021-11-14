@@ -4,8 +4,26 @@
     <div class="container p-4">
         <div class="row justify-content-center">
             <div class="col-lg-8">
-                <div class="d-flex justify-content-between my-4 pb-4">
-                    <h2>Forum Kesehatan</h2>
+                <div class="py-4">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h2>Forum Kesehatan</h2>
+                        </div>
+                        <div>
+                            <a class="btn btn-primary my-1" href="#" id="dropdownMenuClickable" data-bs-toggle="dropdown"
+                                data-bs-auto-close="false" aria-expanded="false">
+                                <i class="bi bi-search"></i></a>
+                            <div class="dropdown-menu dropdown-menu-end bg-transparent border-0"
+                                aria-labelledby="dropdownMenuClickable" style="width: 24rem;">
+                                <form action="/forum" method="GET">
+                                    <div class="input-group">
+                                        <input type="text" name="search" class="form-control" placeholder="Cari..." value="{{ request('search') }}">
+                                        <button class="btn btn-secondary" type="submit"><i class="bi bi-search"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                     <a class="btn btn-primary my-1" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Buat
                         Baru</a>
                 </div>
@@ -16,6 +34,12 @@
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 @endif
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+
+                    </div>
+                </div>
 
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
@@ -50,23 +74,43 @@
                     </div>
                 </div>
 
+                @if ($topic->count())
+                    <ul class="list-unstyled">
+                        @foreach ($topic as $topik)
+                            <li>
+                                <h5>
+                                    <a href="/forum/{{ $topik->slug }}">
+                                        <strong>{{ $topik->topic }}</strong> : {{ $topik->content }}
+                                    </a>
+                                </h5>
+                                <small>{{ $topik->user->name }} ({{ $topik->user->email }})<span class="text-muted">
+                                        -
+                                        {{ $topik->created_at->diffForHumans() }}</span></small>
+                                <hr>
+                            </li>
+                        @endforeach
+                    </ul>
+                @else
+                    <h5 class="text-center">Forum tidak ditemukan.</h5>
+                @endif
 
-                <ul class="list-unstyled">
-                    @foreach ($topic as $topik)
-                        <li>
-                            <h5>
-                                <a href="/forum/{{ $topik->slug }}">
-                                    <strong>{{ $topik->topic }}</strong> : {{ $topik->content }}
-                                </a>
-                            </h5>
-                            <small>{{ $topik->user->name }} ({{ $topik->user->email }})<span class="text-muted"> -
-                                    {{ $topik->created_at->diffForHumans() }}</span></small>
-                            <hr>
-                        </li>
-                    @endforeach
-                </ul>
+                <div class="d-flex justify-content-end">
+                    {{ $topic->links() }}
+                </div>
             </div>
-
         </div>
     </div>
+@endsection
+
+@section('others')
+    <script>
+        function search() {
+            var x = document.getElementById("toggle");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
 @endsection

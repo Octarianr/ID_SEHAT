@@ -1,4 +1,4 @@
-<footer class="footer bg-light mt-5">
+<footer class="footer bg-light mt-5 shadow">
     <div class="container p-4">
         <div class="row justify-content-center">
             <div class="col-lg-3">
