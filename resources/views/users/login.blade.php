@@ -42,9 +42,10 @@
                                 placeholder="Password" required>
                             <label for="password">Password</label>
                         </div>
-                        <div class="d-flex justify-content-end mt-2 mb-3">
+                        {{-- <div class="d-flex justify-content-end mt-2 mb-3">
                             <a href="/forgot-password">Lupa Password</a>
-                        </div>
+                        </div> --}}
+                        <br>
                         <div class="d-grid gap-2 col-md-8 mx-auto">
                             <button class="btn btn-lg text-white" type="submit"
                                 style="background-color: tomato">Login</button>

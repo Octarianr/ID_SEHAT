@@ -9,7 +9,7 @@
             <div class="col-lg-5">
                 <div class="card bg-light border-0 m-2">
                     <h5><b>About</b></h5>
-                    <p>Web ini dibuat untuk memenuhi tugas mata kuliah Pemrograman Web</p>
+                    <p>Jika ingin konsultasi langsung dengan Dokter Sehat, silahkan hubungi melalui Whatsapp di pojok kanan bawah.</p>
                 </div>
             </div>
             <div class="col-lg-4">

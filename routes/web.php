@@ -4,11 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BlogController;
-use App\Http\Controllers\BlogPostController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OrganController;
 use App\Http\Controllers\ForumController;
-use App\Http\Controllers\ResetPasswordController;
+use App\Http\Controllers\CommentController;
+use App\Models\Topic;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,6 +57,7 @@ Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->middleware('admin');
 
+
 Route::resource('/blogs', BlogController::class);
 
 // lupa password
@@ -66,6 +67,19 @@ Route::resource('/blogs', BlogController::class);
 // Forum index
 Route::get('/forum', [ForumController::class, 'index'])->middleware('auth');
 Route::post('/forum/create', [ForumController::class, 'create']);
+
+// My Forum
+Route::get('/forum/my-topics', function () {
+    return view('forum.mytopic', [
+        'topic' => Topic::where('user_id', auth()->user()->id)->get()
+    ]);
+})->middleware('auth');
+
 // Single forum
 Route::get('/forum/{topic:slug}', [ForumController::class, 'show']);
-Route::post('/forum/{topic:slug}', [ForumController::class, 'store']); // store comment
+Route::delete('/forum/{topic:slug}', [ForumController::class, 'destroy']);
+
+// Komen
+Route::post('/forum/{topic:slug}/comment', [CommentController::class, 'store']);
+Route::delete('/forum/comment/{comment}', [CommentController::class, 'destroy']);
+

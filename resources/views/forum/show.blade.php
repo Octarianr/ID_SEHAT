@@ -15,10 +15,18 @@
                 <p>{{ $topic->content }}</p>
 
 
-                <div class="p-2">
-                    <a class="text-decoration-underline" onclick="toggle()" style="cursor: pointer;"><small>Jawab
-                            disini...</small></a>
-                    <form action="" class="form-floating mt-2" method="POST" style="display: none; transition: display 0.5s;"
+                <div class="">
+                    <a class="text-decoration-underline" onclick="toggle()" style="cursor: pointer;">Comment</a>
+                    @if (auth()->user()->is_admin)
+                        <form action="/forum/{{ $topic->slug }}" method="POST" class="d-inline">
+                            @method('delete')
+                            @csrf
+                            <button class="text-decoration-underline text-muted" style="border: unset; background: unset;"
+                                onclick="return confirm('Are you sure?')">Delete Topic</button>
+                        </form>
+                    @endif
+
+                    <form action="/forum/{{ $topic->slug }}/comment" class="form-floating mt-2" method="POST" style="display: none; transition: display 0.5s;"
                         id="comment-form">
                         @csrf
                         <input type="hidden" name="topic_id" value="{{ $topic->id }}">
@@ -34,7 +42,7 @@
 
 
             <div class="col-lg-8">
-                <h5 class="mb-3"><strong style="color: tomato">Jawaban</strong></h5>
+                <h5 class="mb-3"><strong style="color: tomato">Komentar</strong></h5>
                 @if (session()->has('success'))
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
                         {{ session('success') }}
@@ -45,10 +53,11 @@
                 <ul class="list-unstyled">
                     @foreach ($topic->comment->where('parent', 0) as $komen)
                         <li>
-                            @if ($komen->user->email == 'drsehat@email.com')
+                            @if ($komen->user->is_admin)
                                 <small>
-                                    <strong style="color: #ff5555;">{{ $komen->user->name }} ({{ $komen->user->email }})</strong><span
-                                        class="text-muted"> - {{ $komen->created_at->diffForHumans() }}</span>
+                                    <strong style="color: #ff5555;">{{ $komen->user->name }}
+                                        ({{ $komen->user->email }})</strong><span class="text-muted"> -
+                                        {{ $komen->created_at->diffForHumans() }}</span>
                                     <p>{{ $komen->content }}</p>
                                 </small>
                             @else
@@ -58,19 +67,29 @@
                                     <p>{{ $komen->content }}</p>
                                 </small>
                             @endif
-                            <div class="dropdown mb-2">
-                                <a class="text-decoration-underline" href="#" id="dropdownMenuClickable" data-bs-toggle="dropdown"
-                                    data-bs-auto-close="false" aria-expanded="false">
-                                    <small>Jawab</small>
+                            <div class="dropdown mb-3">
+                                <a class="text-decoration-underline" href="#" id="dropdownMenuClickable"
+                                    data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
+                                    <small>Comment</small>
                                 </a>
+                                @if (auth()->user()->is_admin)
+                                    <form action="/forum/comment/{{ $komen->id }}" method="POST" class="d-inline">
+                                        @method('delete')
+                                        @csrf
+                                        <button class="text-decoration-underline text-muted"
+                                            style="border: unset; background: unset;"
+                                            onclick="return confirm('Are you sure?')"><small>Delete Comment</small></button>
+                                    </form>
+                                @endif
                                 <div class="dropdown-menu bg-light" style="width: 100%"
                                     aria-labelledby="dropdownMenuClickable">
-                                    <form action="" method="POST" class="p-2" id="comment-form2">
+                                    <form action="/forum/{{ $topic->slug }}/comment" method="POST" class="form-floating px-2 mt-2" id="comment-form2">
                                         @csrf
                                         <input type="hidden" name="topic_id" value="{{ $topic->id }}">
                                         <input type="hidden" name="parent" value="{{ $komen->id }}">
-                                        <textarea class="form-control" placeholder="Tulis jawaban Anda"
-                                            name="floatingTextarea" id="content" rows="3"></textarea>
+                                        <textarea class="form-control" placeholder="Tulis jawaban Anda" name="content"
+                                            id="floatingTextarea" style="height: 100px">{{ old('content') }}</textarea>
+                                        <label for="floatingTextarea">Tulis jawaban Anda</label>
                                         <input type="submit" class="btn btn-primary btn-sm my-2" value="Kirim">
                                     </form>
                                 </div>
@@ -78,12 +97,21 @@
                             <ul class="list-unstyled">
                                 @foreach ($komen->child as $anak)
                                     <li class="ms-4">
-                                        <small>
-                                            <strong>{{ $anak->user->name }} ({{ $anak->user->email }})</strong><span
-                                                class="text-muted"> -
-                                                {{ $anak->created_at->diffForHumans() }}</span>
-                                            <p>{{ $anak->content }}</p>
-                                        </small>
+                                        @if ($anak->user->is_admin)
+                                            <small>
+                                                <strong style="color: #ff5555;">{{ $anak->user->name }}
+                                                    ({{ $anak->user->email }})</strong><span class="text-muted"> -
+                                                    {{ $anak->created_at->diffForHumans() }}</span>
+                                                <p>{{ $anak->content }}</p>
+                                            </small>
+                                        @else
+                                            <small>
+                                                <strong>{{ $anak->user->name }}
+                                                    ({{ $anak->user->email }})</strong><span class="text-muted"> -
+                                                    {{ $anak->created_at->diffForHumans() }}</span>
+                                                <p>{{ $anak->content }}</p>
+                                            </small>
+                                        @endif
                                     </li>
                                 @endforeach
                             </ul>

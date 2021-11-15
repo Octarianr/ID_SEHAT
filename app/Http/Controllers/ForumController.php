@@ -23,7 +23,7 @@ class ForumController extends Controller
 
     public function create(Request $request) {
         $request->request->add(['user_id' => auth()->user()->id]);
-        $topic = Topic::create($request->all());
+        Topic::create($request->all());
         
         return redirect()->back()->with('success', 'Terkirim');
     }
@@ -33,10 +33,19 @@ class ForumController extends Controller
         return view('forum.show', compact(['topic']));
     }
 
-    public function store(Request $request)
+    public function destroy(Topic $topic)
     {
-        $request->request->add(['user_id' => auth()->user()->id]);
-        $comment = Comment::create($request->all());
-        return redirect()->back()->with('success', 'Terkirim');
+        $this->authorize('admin');
+        
+        $comments = $topic->comment();
+
+        foreach($comments->get() as $comment) {
+            $comment->child()->delete();
+        }
+
+        $comments->delete();
+        $topic->delete();
+
+        return redirect('/forum')->with('success', 'Terhapus');
     }
 }

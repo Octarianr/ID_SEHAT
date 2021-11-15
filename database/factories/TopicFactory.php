@@ -20,7 +20,7 @@ class TopicFactory extends Factory
         return [
             'topic' => $this->faker->sentence(mt_rand(2, 6)),
             'content' => $this->faker->text(100, 300),
-            'user_id' => mt_rand(1, 10),
+            'user_id' => mt_rand(17, 24),
         ];
     }
 }

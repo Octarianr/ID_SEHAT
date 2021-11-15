@@ -24,8 +24,12 @@
                             </div>
                         </div>
                     </div>
-                    <a class="btn btn-primary my-1" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Buat
-                        Baru</a>
+                    <div class="d-flex justify-content-start">
+                        <a class="btn btn-primary my-1 mx-2" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Buat
+                            Baru</a>
+                        <a href="/forum/my-topics" class="btn btn-primary my-1 mx-2">Lihat topik Anda</a>
+                    </div>
+                    
                 </div>
 
                 @if (session()->has('success'))
@@ -34,12 +38,6 @@
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 @endif
-
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-
-                    </div>
-                </div>
 
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">

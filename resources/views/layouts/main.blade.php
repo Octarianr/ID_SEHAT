@@ -30,6 +30,10 @@
             color: #ff5555;
         }
 
+        .navbar-light .navbar-nav .nav-link:hover {
+            color: #ff5555;
+        }
+
         .btn.btn-default {
             background-color: #ff5555;
             border: 1px solid unset;
@@ -82,8 +86,9 @@
         [rel='prev'],
         [rel='next'] {
             color: #808080;
-            
+
         }
+
         [rel='prev']:hover,
         [rel='next']:hover {
             color: #ff5555;

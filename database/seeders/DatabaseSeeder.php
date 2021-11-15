@@ -28,8 +28,8 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         
-        // \App\Models\User::factory(5)->create();
-        // \App\Models\Topic::factory(20)->create();
+        //\App\Models\User::factory(8)->create();
+        //\App\Models\Topic::factory(20)->create();
         \App\Models\Comment::factory(40)->create();
 
 
