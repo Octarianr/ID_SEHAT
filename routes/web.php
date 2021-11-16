@@ -8,6 +8,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OrganController;
 use App\Http\Controllers\ForumController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\ForgotPasswordController;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Topic;
 
 /*
@@ -61,8 +63,8 @@ Route::get('/dashboard', function () {
 Route::resource('/blogs', BlogController::class);
 
 // lupa password
-// Route::get('/forgot-password', [ResetPasswordController::class, 'forgot'])->middleware('guest');
-// Route::post('/forgot-password', [ResetPasswordController::class, 'reset']);
+Route::get('/forgot-password', [ForgotPasswordController::class, 'getEmail'])->middleware('guest');
+Route::post('/forgot-password', [ForgotPasswordController::class, 'postEmail']);
 
 // Forum index
 Route::get('/forum', [ForumController::class, 'index'])->middleware('auth');
